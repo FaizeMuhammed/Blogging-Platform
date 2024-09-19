@@ -1,0 +1,31 @@
+<div class="maincomponent">
+  
+    <section class="articles">
+        <h2 class="articles_heading">Latest</h2>
+        <div class="hr-div"><hr class="latest_hr"></div>
+        <ul  class="article_ul">
+
+            <% data.forEach(post => { %>
+             
+            
+            <li class="posts_li">
+                <a href="/post/ <%= post._id %>">
+                    
+                    <span class="title_post"><%= post.title %></span>
+                    <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+                   
+                </a>
+                <hr>
+    
+            </li>
+            <% }) %>
+            
+        </ul>
+        <% if (nextPage!== null) { %>
+            <a href="/?page= <%= nextPage %>" class="pagination">&lt; view older posts</a>
+    
+            
+        <% } %> 
+        
+    </section>
+</div>
