@@ -1,11 +1,11 @@
-<div class="maincomponent">
+<div class="maincomponent"></div>
   
     <section class="articles">
-        <h2 class="articles_heading">Latest Posts</h2>
+        <h2 class="articles_heading">Your Posts</h2>
         <div class="hr-div"><hr class="latest_hr"></div>
         <ul  class="article_ul">
 
-            <% data.forEach(post => { %>
+            <% posts.forEach(post => { %>
              
             
             <li class="posts_li">
@@ -13,19 +13,23 @@
                     
                     <span class="title_post"> <p><%= post.title %></p><br><p class="content"><%= post.body %></p></span>
                     <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+                    <form action="/delete-post/<%= post._id %>" method="POST" style="display: inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                    <form action="/edit-post/<%= post._id %>" method="GET" style="display: inline;">
+                        <button type="submit">Edit</button>
+                    </form>  
                    
                 </a>
+
                 <!-- <hr> -->
     
             </li>
             <% }) %>
             
         </ul>
-        <% if (nextPage!== null) { %>
-            <a href="/?page= <%= nextPage %>" class="pagination">&lt; view older posts</a>
-    
-            
-        <% } %> 
+        <a href="/" class="pagination back">&lt;Back</a>
+      
         
     </section>
 </div>

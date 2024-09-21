@@ -17,6 +17,15 @@ const postSchema=new Schema({
     updatedAt:{
         type:Date,
         default:Date.now
-    }
+    }, 
+     userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user',  
+        required: true
+    },
+    username: {
+        type: String,  // Optional, but useful to display the post's author
+        required: true
+      }
 });
 module.exports=mongoose.model('post',postSchema);

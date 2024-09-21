@@ -1,0 +1,23 @@
+<div class="login-container">
+    <div class="login-image">
+        <h2>Login</h2>
+    </div>
+    <div class="login-form">
+        <h1>Welcome to</h1>
+        <h2>GO-BLOG</h2>
+        <p>Let's log you in quickly</p>
+        <% if (typeof error !== 'undefined') { %>
+            <div class="error-message">
+                <p><%= error %></p>
+            </div>
+        <% } %>
+        <form action="/login" method="POST">
+            <input type="text" placeholder="Enter your username" name="username" required>
+            <input type="password" placeholder="Enter your password" name="password" required>
+            <button type="submit">LOGIN</button>
+        </form>
+        <div class="signup-link">
+            <p>don't have an account? <a href="/signup">sign-up</a></p>
+        </div>
+    </div>
+</div>
