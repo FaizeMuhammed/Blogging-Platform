@@ -1,13 +1,19 @@
-<h2>Edit Post</h2>
 
-<form action="/edit-post/<%= Post._id %>" method="POST">
-  <div>
-    <label for="title">Title:</label>
-    <input type="text" name="title" id="title" value="<%= Post.title %>" required />
-  </div>
-  <div>
-    <label for="body">Body:</label>
-    <textarea name="body" id="body" required><%= Post.body %></textarea>
-  </div>
-  <button type="submit">Update Post</button>
-</form>
+
+<div class="createcontainer">
+
+  <h2 class="articles_heading   createyourpost">Edit Your Post</h2>
+  <form action="/edit-post/<%= Post._id %>" method="POST" class="create-post-form">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" value="<%= Post.title %>" required class="input-field" />
+    </div>
+    <div class="form-group">
+      <label for="body">Body:</label>
+      <textarea name="body" id="body" required class="input-field textarea-field"><%= Post.body %></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Update  Post</button>
+  </form>
+  <a href="/" class="pagination back">&lt;Back</a>
+
+</div>

@@ -60,8 +60,13 @@ header{
     align-items: flex-start;
 
 }
+.createcontainer{
+   margin-top: 150px;
+
+}
 .main{
     width: 90%;
+    
 }
 .sidenav{
     display: flex;
@@ -142,16 +147,21 @@ footer{
     border: 2px solid #6EEB83;
     border-radius: 10px;
     padding: 40px;
+    background-color: #3c3b3b;
     height: 680px;
     overflow: scroll;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; 
     
 }
+.yourpost{
+   
+}
 .article_ul::-webkit-scrollbar { /* WebKit */
     display: none;
 }
 .posts_li{
+    background-color: #212121;
     margin: 15px 0px 15px 0px;
     border-radius: 10px;
     padding: 40px;
@@ -159,7 +169,7 @@ footer{
 }
 
 .article_ul li{
-    border: 2px solid #ffffff;
+    
     padding: 40px;
     list-style: none;
 }
@@ -187,7 +197,7 @@ footer{
 }
 .posts_li:hover{
     opacity: 0.5;
-    background-color: #3c3b3b;
+    background-color: black;
     border-radius: 20px;
     
 
@@ -197,7 +207,8 @@ footer{
     border:1px solid #6EEB83;
     border-radius: 10px;
     text-decoration: none;
-    padding: 10px
+    padding: 10px;
+    margin-top: 30px;
 }
 .pagination:hover{
     opacity: 0.5;
@@ -243,19 +254,18 @@ footer{
 .back{
     margin-left: 50px;
 }
-/* login */
 
 
-/* Container for the login form */
+
 .login-container {
     display: flex;
     min-height: 100vh;
 }
 
-/* Left side image area */
+
 .login-image {
     flex: 1;
-    background: url('../assets/Side-Background.png') no-repeat center center/cover; /* Replace 'your-image.jpg' with your image path */
+    background: url('../assets/Side-Background.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -266,7 +276,6 @@ footer{
 
 .login-image h2 {
     font-size: 50px;
-    /* background-color: rgba(0, 0, 0, 0.5);  */
     padding: 10px;
     border-radius: 5px;
 }
@@ -347,9 +356,7 @@ footer{
     text-decoration: underline;
 }
 
-/* Responsive adjustments */
 
-/* Container for the sign-up form */
 .signup-container {
     display: flex;
     min-height: 100vh;
@@ -358,7 +365,7 @@ footer{
 /* Left side image area */
 .signup-image {
     flex: 1;
-    background: url('../assets/Side-Background.png') no-repeat center center/cover; /* Replace 'your-signup-image.jpg' with your image path */
+    background: url('../assets/Side-Background.png') no-repeat center center/cover; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -369,7 +376,6 @@ footer{
 
 .signup-image h2 {
     font-size: 50px;
- /* Semi-transparent background */
     padding: 10px;
     border-radius: 5px;
 }
@@ -461,7 +467,193 @@ footer{
 }
 /* Responsive adjustments */
 
+.create-post-form {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #27ff7a;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .form-group {
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+  .createyourpost{
+    margin-left: 250px;
+    color: #22e96f;
+  }
+  
+  label {
+    font-size: 1.1rem;
+    color: #27ff7a;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #27ff7a;
+    border-radius: 5px;
+    background-color: #1d1d1d;
+    color: white;
+  }
+  
+  .textarea-field {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #27ff7a;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #22e96f;
+  }
+  
+  .pagination.back {
+    display: block;
+    margin-top: 20px;
+    color: #27ff7a;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+  }
+  
+  .pagination.back:hover {
+    color: #22e96f;
+  }
 
 
 
 
+.posts{
+    background-color: #1c1c1c;
+}
+.yourpost-container {
+    padding: 20px;
+    background-color: #1c1c1c;
+    border: 2px solid #00ff88;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+}
+
+/* Heading */
+.yourpost-heading {
+    font-size: 24px;
+    color: #00ff88; 
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Divider */
+.yourpost-divider {
+    margin-bottom: 20px;
+}
+
+.yourpost-hr {
+    border: 1px solid #00ff88; 
+}
+
+/* List */
+.yourpost-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.yourpost-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #282828;
+    border-radius: 10px;
+    
+}
+
+.yourpost-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Title & Content */
+.yourpost-title-content {
+    margin-bottom: 10px;
+}
+
+.yourpost-title {
+    font-size: 18px;
+    color: #00ff88; 
+    font-weight: bold;
+}
+
+.yourpost-body {
+    font-size: 14px;
+    color: #cccccc; 
+}
+
+/* Post Info */
+.yourpost-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.yourpost-date {
+    font-size: 12px;
+    color: #888888; 
+}
+
+/* Buttons */
+.yourpost-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.yourpost-delete-btn, .yourpost-edit-btn {
+    padding: 8px 12px;
+    background: #1c1c1c; 
+    border: none;
+    color: #00ff88;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #00ff88;
+}
+
+.yourpost-delete-btn:hover, .yourpost-edit-btn:hover {
+    opacity: 0.9;
+}
+
+/* Back Button */
+.yourpost-back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    color: #00ff88; 
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid #00ff88;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.yourpost-back-btn:hover {
+    color: #00ff88;
+    border-color: #1c1c1c;
+}

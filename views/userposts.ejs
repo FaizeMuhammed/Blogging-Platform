@@ -1,35 +1,38 @@
-<div class="maincomponent"></div>
-  
-    <section class="articles">
-        <h2 class="articles_heading">Your Posts</h2>
-        <div class="hr-div"><hr class="latest_hr"></div>
-        <ul  class="article_ul">
 
+
+
+
+
+<div class="yourpost-container">
+    <section class="yourpost-section">
+        <h2 class="yourpost-heading">Your Posts</h2>
+        <div class="yourpost-divider">
+            <hr class="yourpost-hr">
+        </div>
+        <ul class="yourpost-list">
             <% posts.forEach(post => { %>
-             
-            
-            <li class="posts_li">
-                <a href="/post/ <%= post._id %>">
-                    
-                    <span class="title_post"> <p><%= post.title %></p><br><p class="content"><%= post.body %></p></span>
-                    <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
-                    <form action="/delete-post/<%= post._id %>" method="POST" style="display: inline;">
-                        <button type="submit">Delete</button>
-                    </form>
-                    <form action="/edit-post/<%= post._id %>" method="GET" style="display: inline;">
-                        <button type="submit">Edit</button>
-                    </form>  
-                   
+            <li class="yourpost-item">
+                <a href="/post/<%= post._id %>" class="yourpost-link">
+                    <div class="yourpost-title-content">
+                        <p class="yourpost-title"><%= post.title %></p>
+                        <p class="yourpost-body"><%= post.body %></p>
+                    </div>
+                    <div class="yourpost-info">
+                        <span class="yourpost-date"><%= post.createdAt.toDateString() %></span>
+                        <div class="yourpost-actions">
+                            <form action="/delete-post/<%= post._id %>" method="POST" class="yourpost-action-form">
+                                <button type="submit" class="yourpost-delete-btn">Delete</button>
+                            </form>
+                            <form action="/edit-post/<%= post._id %>" method="GET" class="yourpost-action-form">
+                                <button type="submit" class="yourpost-edit-btn">Edit</button>
+                            </form>
+                        </div>
+                    </div>
                 </a>
-
-                <!-- <hr> -->
-    
             </li>
             <% }) %>
-            
         </ul>
-        <a href="/" class="pagination back">&lt;Back</a>
-      
-        
+        <a href="/" class="yourpost-back-btn">&lt;Back</a>
     </section>
 </div>
+
