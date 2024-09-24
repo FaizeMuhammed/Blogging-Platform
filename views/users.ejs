@@ -1,0 +1,41 @@
+<div class="maincomponent"></div>
+  
+    <section class="articles">
+        <h2 class="articles_heading">Users </h2>
+        <div class="hr-div"><hr class="latest_hr"></div>
+        <ul  class="article_ul">
+
+            <% data.forEach(post => { %>
+             
+            
+            <li class="posts_li">
+                <div>
+                    
+                    <span class=" usersspace  title_post userdetails"> <span class="material-symbols-outlined">
+                        person
+                        </span><P  class="contentuser"><%= post.username %></P></span>
+                        
+                        <form action="/chat"  method="post">
+                            <input type="hidden" name="receivername" value="<%= post.username %>">
+                            <input type="hidden" name="receiverId" value="<%= post.id %>">
+
+                            <button type="submit">chat</button>
+                        </form>
+                    
+                    
+                   
+                    </div>
+                <!-- <hr> -->
+    
+            </li>
+            <% }) %>
+            
+        </ul>
+        <% if (nextPage!== null) { %>
+            <a href="/?page= <%= nextPage %>" class="pagination">&lt; view older posts</a>
+    
+            
+        <% } %> 
+        
+    </section>
+</div>

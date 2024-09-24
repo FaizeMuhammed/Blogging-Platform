@@ -657,3 +657,100 @@ footer{
     color: #00ff88;
     border-color: #1c1c1c;
 }
+
+
+
+  #chatBox {
+    height: 500px;
+    width: 100%;
+    overflow-y: auto; /* Scroll if messages overflow */
+    display: flex;
+    flex-direction: column-reverse; /* New messages appear at the top */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+
+  #messages {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #messages li {
+    margin: 10px 0;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  /* Styles for the recipient's messages (left) */
+  .recipient {
+    background-color: #e1f7d5;
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  /* Styles for the user's messages (right) */
+  .user {
+    background-color: #c2e9fb;
+    text-align: right;
+    align-self: flex-end;
+    color: #1c1c1c;
+  }
+
+  /* Message timestamps */
+  .timestamp {
+    font-size: 10px;
+    color: #888;
+    position: absolute;
+    bottom: -15px;
+    right: 10px;
+  }
+
+  /* Input section styling */
+  #inputSection {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  #messageInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .userdetails span{
+    font-size: 55px;
+  }
+  .usersspace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contentuser{
+    font-size: 25px;
+    color: #fff;
+  }
+
+  #userid{
+    display: none;
+  }
+  #receiver{
+    display: none;
+  }
+  #receivername{
+    color: #00ff88;
+  }
+
+
+

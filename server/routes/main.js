@@ -14,6 +14,8 @@ router.use('/signup',require('./signup'));
 router.use('/delete-post',require('./deletepost'));
 router.use('/userposts',require('./userspost'));
 router.use('/edit-post',require('./editpost'));
+router.use('/Users',require('./users'));
+router.use('/chat',require('./chat'));
 // login get page
 router.get('/login',(req,res)=>{
     res.render('loginpage',{layout:'./layouts/login'})
