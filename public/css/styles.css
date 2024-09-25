@@ -798,6 +798,7 @@ footer{
     color: #fff;
   }
   .chatbutton{
+    margin: 10px;
     background-color: #1c1c1c;
     border: 2px solid #00ff88;
     border-top-left-radius: 10px;
@@ -827,6 +828,10 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+ }
+ .onlineicon{
+    font-size: 30px;
+    padding-left: 30px;
  }
 
 

@@ -2,11 +2,8 @@
 
 const socket=io();
 
-const receiverId=document.getElementById('receiver').innerHTML;
-const timestamp= new Date().toLocaleTimeString();
-const receivername=document.getElementById('receivername').innerHTML;
-const userId=document.getElementById('userid').innerHTML;
 
+const userId=document.getElementById('userid').innerHTML;
 
 
 socket.emit('register', userId);
@@ -14,7 +11,10 @@ socket.emit('register', userId);
 
 function sendMessage(){
     const message=document.getElementById('messageInput').value;
-
+    const receiverId=document.getElementById('receiver').innerHTML;
+    const timestamp= new Date().toLocaleTimeString();
+    const receivername=document.getElementById('receivername').innerHTML;
+    const userId=document.getElementById('userid').innerHTML;
     
   
     

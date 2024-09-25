@@ -16,14 +16,15 @@ router.post('',checkAuth, async(req,res)=>{
     
     
     
-    
+    const receiver = await User.findById(receiverId);
     
     const data={
       
     username,
     userId,
     receivername,
-    receiverId
+    receiverId,
+    socketId: receiver.socketId
 
         
     }

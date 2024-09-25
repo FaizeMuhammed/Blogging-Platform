@@ -12,7 +12,7 @@ router.get('',checkAuth,async (req,res)=>{
         
         const perpage=8;
         const page=req.query.page || 1
-        const data = await User.find();
+        const data = await User.find().skip((perpage * page) - perpage).limit(perpage);
         
 
         const count=await User.countDocuments();

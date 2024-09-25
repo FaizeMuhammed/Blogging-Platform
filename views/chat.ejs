@@ -2,7 +2,11 @@
 <div class="chatingdiv">
   <div class="namereceiver"><h4 id="receivername"><span class="material-symbols-outlined">
     account_circle
-    </span><%= data.receivername %></h4></div>
+    </span><%= data.receivername %>  <% if (data.socketId === null) { %>
+      <span style="color: red;">(Offline)</span>
+  <% } else { %>
+      <span style="color: green;">(Online)</span>
+  <% } %></h4></div>
   
   <h4  id="receiver"><%= data.receiverId %></h4>
     

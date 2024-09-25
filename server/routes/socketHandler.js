@@ -41,6 +41,7 @@ module.exports = (io) => {
 
             const receiverSocketId = await findreciverSocketId(receiverId);
             if (receiverSocketId) {
+                
                 io.to(receiverSocketId).emit('receiveMessage', {
                     message: message,
                     sender: sender,

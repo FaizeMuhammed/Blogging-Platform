@@ -15,8 +15,7 @@
                         person
                         </span><P  class="contentuser"><%= post.username %></P></span>
                         
-    
-                    
+                      
                     
                    
                     </div>
@@ -24,8 +23,22 @@
                     <form action="/chat"  method="post">
                         <input type="hidden" name="receivername" value="<%= post.username %>">
                         <input type="hidden" name="receiverId" value="<%= post.id %>">
-
+                        <% if (post.socketId === null) { %>
+                            <span class="material-symbols-outlined onlineicon" style="color: red;" >
+                                <span class="material-symbols-outlined">
+                                    radio_button_checked
+                                    </span>
+                                </span>
+                        <% } else { %>
+                            <span class="material-symbols-outlined onlineicon" style="color: green;">
+                                <span class="material-symbols-outlined">
+                                    radio_button_checked
+                                    </span>
+                                </span>
+                        <% } %>
                         <button class="chatbutton" type="submit">Message</button>
+                       
+                    
                     </form>
                 <!-- <hr> -->
     
