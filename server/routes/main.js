@@ -26,56 +26,57 @@ router.get('/login',(req,res)=>{
 router.post('/login',async (req, res) => {
         const { username, password } = req.body;
         
-        res.send('sdfghj')
+        
         
         
         
 
-        // try {
-        //     const user = await User.findOne({ username });
+        try {
+            const user = await User.findOne({ username });
             
             
             
             
-        //     if(!user){
-        //         return res.render('loginpage', {
-        //             layout: './layouts/login', 
-        //             error: 'Invalid username...!'
-        //         });
-        //     }
+            if(!user){
+                return res.render('loginpage', {
+                    layout: './layouts/login', 
+                    error: 'Invalid username...!'
+                });
+            }
             
             
             
   
             
-        //     if(password!==user.password){
-        //         return res.render('loginpage', {
-        //             layout: './layouts/login', 
-        //             error: 'Invalid  password...!'
-        //         });
-        //     }
+            if(password!==user.password){
+                return res.render('loginpage', {
+                    layout: './layouts/login', 
+                    error: 'Invalid  password...!'
+                });
+            }
             
             
             
             
-        //     const token=jwt.sign(
-        //         {id:user._id,username:user.username},
-        //         process.env.JWT_SECRET,
-        //         {expiresIn:'1h'}
-        //     )
+            const token=jwt.sign(
+                {id:user._id,username:user.username},
+                process.env.JWT_SECRET,
+                {expiresIn:'1h'}
+            )
             
             
-        //     res.cookie('token', token, { httpOnly: true, maxAge: 3600000 }); 
+            res.cookie('token', token, { httpOnly: true, maxAge: 3600000 }); 
             
             
-        //     res.redirect('/');
-        // }
-        // catch (error) {
-        //      res.status(500).render('loginpage', {
-        //         layout: './layouts/login', 
-        //         error: 'server error...!'
-        //     });
-        // }
+            res.redirect('/');
+        }
+        catch (error) {
+            res.send('fghj')
+            //  res.status(500).render('loginpage', {
+            //     layout: './layouts/login', 
+            //     error: 'server error...!'
+            // });
+        }
     })
 
 // home//
