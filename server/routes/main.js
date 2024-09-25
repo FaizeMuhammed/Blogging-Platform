@@ -71,11 +71,11 @@ router.post('/login',async (req, res) => {
             res.redirect('/');
         }
         catch (error) {
-            res.send('fghj')
-            //  res.status(500).render('loginpage', {
-            //     layout: './layouts/login', 
-            //     error: 'server error...!'
-            // });
+            
+             res.status(500).render('loginpage', {
+                layout: './layouts/login', 
+                error: 'server error...!'
+            });
         }
     })
 
