@@ -1,18 +1,28 @@
-<h4 id="receivername"><%= data.receivername %></h4>
-<h4  id="receiver"><%= data.receiverId %></h4>
+<div class="maincomponent chatcomponent">
+<div class="chatingdiv">
+  <div class="namereceiver"><h4 id="receivername"><span class="material-symbols-outlined">
+    account_circle
+    </span><%= data.receivername %></h4></div>
   
-<h4 id="userid"><%= data.userId %></h4>
-<div id="chatBox">
+  <h4  id="receiver"><%= data.receiverId %></h4>
     
-    <ul id="messages">
+  <h4 id="userid"><%= data.userId %></h4>
+  <div id="chatBox">
       
-    </ul>
-  </div>
-  
-  
-  <div id="inputSection">
-    <input id="messageInput" type="text" placeholder="Type your message here...">
-    <button onclick="sendMessage()">Send</button>
+      <ul id="messages">
+        
+      </ul>
+    </div>
+    
+    
+    <div id="inputSection">
+      <input id="messageInput" type="text" placeholder="Type your message here...">
+      <button class="sendbtn" onclick="sendMessage()"><span class="material-symbols-outlined">
+        send
+        </span></button>
+    </div>
+</div>
+
   </div>
   <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>  
   <script src="/js/script.js"></script>

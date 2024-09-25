@@ -44,13 +44,18 @@ socket.on('receiveMessage', (data) => {
 })
 
 function addMessageToUI(type,message,timestamp){
-    const messageElement=document.createElement('li');
+    const messageouter=document.createElement('li');
+    const messageElement=document.createElement('p');
     messageElement.textContent=message;
+    messageouter.appendChild(messageElement);
 
     if(type === 'user'){
+        
         messageElement.classList.add('user');
+        messageouter.classList.add('messageouter-user')
     }
     else{
+        messageouter.classList.add('messageouter-recipient')
         messageElement.classList.add('recipient');
     }
 
@@ -61,7 +66,7 @@ function addMessageToUI(type,message,timestamp){
 
 
     const messagesList = document.getElementById('messages');
-    messagesList.appendChild(messageElement);
+    messagesList.appendChild(messageouter);
 
 }
 

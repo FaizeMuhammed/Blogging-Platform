@@ -4,13 +4,14 @@ const checkAuth=require('../middleware/auth')
 const User=require('../models/user')
 
 
-router.post('',checkAuth,(req,res)=>{
+router.post('',checkAuth, async(req,res)=>{
     
     
     const username=req.username;
     const userId=req.userId;
     const receivername=req.body.receivername;
     const receiverId=req.body.receiverId
+ 
 
     
     
@@ -18,7 +19,7 @@ router.post('',checkAuth,(req,res)=>{
     
     
     const data={
-         
+      
     username,
     userId,
     receivername,
@@ -26,6 +27,7 @@ router.post('',checkAuth,(req,res)=>{
 
         
     }
+
     
 
     res.render('chat',{data})

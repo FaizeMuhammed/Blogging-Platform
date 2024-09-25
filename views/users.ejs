@@ -1,4 +1,4 @@
-<div class="maincomponent"></div>
+<div class="maincomponent">
   
     <section class="articles">
         <h2 class="articles_heading">Users </h2>
@@ -11,20 +11,22 @@
             <li class="posts_li">
                 <div>
                     
-                    <span class=" usersspace  title_post userdetails"> <span class="material-symbols-outlined">
+                    <span class=" usersspace  title_post userdetails"> <span class="material-symbols-outlined person">
                         person
                         </span><P  class="contentuser"><%= post.username %></P></span>
                         
-                        <form action="/chat"  method="post">
-                            <input type="hidden" name="receivername" value="<%= post.username %>">
-                            <input type="hidden" name="receiverId" value="<%= post.id %>">
-
-                            <button type="submit">chat</button>
-                        </form>
+    
                     
                     
                    
                     </div>
+
+                    <form action="/chat"  method="post">
+                        <input type="hidden" name="receivername" value="<%= post.username %>">
+                        <input type="hidden" name="receiverId" value="<%= post.id %>">
+
+                        <button class="chatbutton" type="submit">Message</button>
+                    </form>
                 <!-- <hr> -->
     
             </li>
