@@ -24,7 +24,7 @@ const postSchema=new Schema({
         required: true
     },
     username: {
-        type: String,  // Optional, but useful to display the post's author
+        type: String, 
         required: true
       }
 });
